@@ -33,6 +33,8 @@
 
 <img alt="Demonstration Image" src=".github/demo.png">
 
+> Inspired by the landing page of [Rocketseat](https://rocketseat.com.br/)
+
 ## :rocket: Features
 
 - Adaptive layout to different devices
