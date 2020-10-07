@@ -1,0 +1,149 @@
+header {
+  background-color: #7159c1;
+}
+
+header .container {
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .logo {
+  margin-left: 30px;
+  padding: 15px 0;
+
+  font-size: 0.001px;
+}
+
+header .logo svg {
+  width: 150px;
+}
+
+header nav {
+  display: block;
+}
+
+header nav ul {
+  display: flex;
+}
+
+header nav ul li {
+  list-style: none;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  font-weight: 600;
+  padding: 50% 24px;
+  transition: 0.25s linear;
+}
+
+header nav ul li a:hover {
+  background-color: rgba(255,255,255, 0.15);
+}
+
+@media (max-width: 660px) {
+  header nav {
+    display: none;
+  }
+
+  .menu-section.active {
+    width: 100vw;
+    height: 100vh;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+
+    background-color: #7159c1;
+  }
+
+  .menu-section.active nav {
+    width: 100vw;
+    height: 100vh;
+    overflow-y: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menu-section.active nav ul {
+    text-align: center;
+    display: block;
+  }
+
+  .menu-section.active nav ul a {
+    margin: 2rem 0;
+    padding: 1.4rem 2rem;
+
+    display: block;
+
+    font-size: 2.5rem;
+
+    animation: fade-in 0.3s, scale-up 0.3s;
+    animation-fill-mode: backwards;
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    } to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes scale-up {
+    from {
+      transform: scale(0.7);
+    } to {
+      transform: scale(1);
+    }
+  }
+
+  .menu-toggle {
+    padding: 7px;
+    margin-right: 20px;
+  }
+
+  .menu-section.active .menu-toggle {
+    position: absolute;
+    top: 16px;
+    right: 0;
+  }
+
+  .menu-toggle .horizontal-line {
+    height: 3px;
+    width: 25px;
+    margin: 0 auto;
+
+    transition: transform 0.3s, opacity 0.2s;
+
+    background-color: #ffffff;
+    transform-origin: center;
+  }
+
+  .menu-toggle .horizontal-line + .horizontal-line {
+    margin-top: 4px;
+  }
+
+  .menu-section.active .menu-toggle .horizontal-line:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .menu-section.active .menu-toggle .horizontal-line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-section.active .menu-toggle .horizontal-line:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+}
